@@ -412,7 +412,7 @@ const PostCallManagement = () => {
                 <div className="space-y-2 text-sm">
                   <p><strong>Subject:</strong> Thank you for your time today - Next steps for TechCorp</p>
                   <div className="bg-white p-3 rounded border">
-                    <p>Hi John,</p>
+                    <p>Hi Rohan,</p>
                     <p className="mt-2">Thank you for taking the time to speak with me today about TechCorp's machine learning training needs.</p>
                     <p className="mt-2">Based on our conversation, I understand that:</p>
                     <ul className="mt-1 ml-4 list-disc">

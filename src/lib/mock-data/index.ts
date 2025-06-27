@@ -26,7 +26,7 @@ export const mockUsers: User[] = [
   },
   {
     id: '2',
-    name: 'Priya Sharma',
+    name: 'Akash Gupta',
     email: 'priya@company.com',
     role: 'manager',
     avatar: '/avatars/priya.jpg',
@@ -56,7 +56,7 @@ export const mockProspects: Prospect[] = [
   },
   {
     id: '2',
-    name: 'Priya Sharma',
+    name: 'Akash Gupta',
     email: 'priya@shiksha.com',
     company: 'Shiksha Tech',
     position: 'HR Director',
@@ -299,7 +299,7 @@ export const mockDashboard: Dashboard = {
       id: '1',
       type: 'success',
       title: 'Deal Closed!',
-      message: 'Priya Sharma from Shiksha Tech just signed up for Leadership Excellence Program',
+      message: 'Akash Gupta from StartupCo just signed up for Leadership Excellence Program',
       timestamp: new Date('2024-01-22T09:30:00'),
       read: false,
     },

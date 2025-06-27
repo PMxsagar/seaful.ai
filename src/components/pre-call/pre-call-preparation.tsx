@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 export function PreCallPreparation() {
-  const prospect = mockProspects[0]; // John Doe example
+  const prospect = mockProspects[0]; // Rohan Verma example
   const suggestedProducts = mockProducts.slice(0, 2);
   const pitchSuggestions = mockPitchSuggestions;
 

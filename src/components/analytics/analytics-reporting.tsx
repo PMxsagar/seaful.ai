@@ -29,7 +29,7 @@ import {
   Users, 
   Phone, 
   Target, 
-  DollarSign,
+  IndianRupee,
   Calendar,
   Download,
   Filter,
@@ -86,7 +86,7 @@ const AnalyticsReporting = () => {
       value: '₹28.5L',
       change: '+12.5%',
       trend: 'up',
-      icon: DollarSign,
+      icon: IndianRupee,
       color: 'text-green-600'
     },
     {

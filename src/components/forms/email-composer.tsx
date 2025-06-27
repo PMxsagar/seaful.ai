@@ -357,21 +357,21 @@ const EmailComposer = () => {
           <div className="space-y-3">
             {[
               {
-                to: 'john@techcorp.com',
+                to: 'rohan@infotech.com',
                 subject: 'Follow-up on ML Training Discussion',
                 status: 'sent',
                 timestamp: '2 hours ago',
                 opened: true,
               },
               {
-                to: 'sarah@edutech.com',
+                to: 'priya@edutech.com',
                 subject: 'Leadership Program Proposal',
                 status: 'sent',
                 timestamp: '1 day ago',
                 opened: true,
               },
               {
-                to: 'mike@startupco.com',
+                to: 'akash@startupco.com',
                 subject: 'Thank you for your time today',
                 status: 'draft',
                 timestamp: '2 days ago',

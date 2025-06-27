@@ -50,7 +50,7 @@ export function InCallSupport() {
   ];
 
   const realtimeInsights = [
-    { type: 'positive', text: 'John mentioned "budget approval" - good buying signal', timestamp: '08:32' },
+    { type: 'positive', text: 'Rohan mentioned "budget approval" - good buying signal', timestamp: '08:32' },
     { type: 'question', text: 'Prospect asked about certification - emphasize accreditation', timestamp: '12:15' },
     { type: 'concern', text: 'Time constraint mentioned - address flexible learning', timestamp: '15:45' },
   ];
@@ -394,11 +394,11 @@ export function InCallSupport() {
                 <CardContent>
                   <div className="space-y-4 max-h-96 overflow-y-auto">
                     {[
-                      { speaker: 'John Doe', time: '08:30', text: "Thanks for taking the time to speak with me today. I'm excited to learn more about your ML training programs." },
+                      { speaker: 'Rohan Verma', time: '08:30', text: "Thanks for taking the time to speak with me today. I'm excited to learn more about your ML training programs." },
                       { speaker: 'You', time: '08:32', text: "Absolutely! I'm excited to help your team enhance their machine learning capabilities. Can you tell me about your current team size and their experience level?" },
-                      { speaker: 'John Doe', time: '08:45', text: "We have about 8 engineers, most with 3-5 years of experience in traditional software development, but limited ML exposure." },
+                      { speaker: 'Rohan Verma', time: '08:45', text: "We have about 8 engineers, most with 3-5 years of experience in traditional software development, but limited ML exposure." },
                       { speaker: 'You', time: '08:50', text: "That's perfect for our program. Our ML Mastery course is designed specifically for experienced developers transitioning to ML." },
-                      { speaker: 'John Doe', time: '09:15', text: "What's the timeline for completion? We're working on tight project deadlines." },
+                      { speaker: 'Rohan Verma', time: '09:15', text: "What's the timeline for completion? We're working on tight project deadlines." },
                       { speaker: 'You', time: '09:18', text: "The program is 6 months long, but it's completely flexible. Your team can learn at their own pace, typically 2-3 hours per week." },
                     ].map((message, index) => (
                       <div key={index} className="flex items-start space-x-3">

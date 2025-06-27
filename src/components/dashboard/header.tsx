@@ -71,7 +71,7 @@ export function Header() {
               <div className="flex flex-col space-y-1">
                 <p className="text-sm font-medium">Deal Closed!</p>
                 <p className="text-xs text-muted-foreground">
-                  Sarah Johnson signed up for Leadership Excellence Program
+                  Priya Sharma signed up for Leadership Excellence Program
                 </p>
               </div>
             </DropdownMenuItem>
