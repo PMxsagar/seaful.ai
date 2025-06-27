@@ -21,7 +21,6 @@ import {
   Building,
   User,
   Target,
-  DollarSign,
   Star,
   MoreHorizontal
 } from 'lucide-react';
@@ -495,7 +494,7 @@ const DataDisplay = () => {
                 <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
                 <p className="text-2xl font-bold">24.5%</p>
               </div>
-              <DollarSign className="h-8 w-8 text-orange-600" />
+              <div className="h-8 w-8 text-orange-600">₹</div>
             </div>
           </CardContent>
         </Card>
