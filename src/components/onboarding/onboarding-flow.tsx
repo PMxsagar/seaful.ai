@@ -113,8 +113,8 @@ export function OnboardingFlow() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="flex p-0">
-        <div className="w-1/3 bg-gray-100 flex items-center justify-center p-4 rounded-l-lg">
+      <DialogContent className="flex p-4 min-h-[340px]">
+        <div className="w-1/3 flex items-center justify-center p-4 rounded-l-lg">
           <Image
             src="/images/logo.jpeg"
             alt="Seaful Logo"
@@ -123,11 +123,11 @@ export function OnboardingFlow() {
             objectFit="contain"
           />
         </div>
-        <div className="w-2/3 p-6 flex flex-col">
+        <div className="w-2/3 p-8 flex flex-col justify-center">
           <DialogHeader>
           </DialogHeader>
           <AnimatePresence mode="wait">
-            <div className="py-4 flex-grow">
+            <div className="py-4">
               {renderStep()}
             </div>
           </AnimatePresence>
