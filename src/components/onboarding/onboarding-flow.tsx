@@ -113,12 +113,9 @@ export function OnboardingFlow() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Onboarding</DialogTitle>
-        </DialogHeader>
-        {currentStep >= 1 && currentStep <= features.length && (
-          <h2 className="text-2xl font-bold mb-4 text-center">Discover Our Features</h2>
-        )}
+        {/* <DialogHeader> */}
+        {/*   <DialogTitle>Onboarding</DialogTitle> */}
+        {/* </DialogHeader> */}
         <AnimatePresence mode="wait">
           <div className="py-4">
             {renderStep()}
