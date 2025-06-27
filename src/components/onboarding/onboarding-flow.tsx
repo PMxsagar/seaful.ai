@@ -2,8 +2,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "../ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
+import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
 import { Card } from "../ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOnboarding } from "../../context/onboarding-context";
@@ -112,24 +113,34 @@ export function OnboardingFlow() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent>
-        {/* <DialogHeader> */}
-        {/*   <DialogTitle>Onboarding</DialogTitle> */}
-        {/* </DialogHeader> */}
-        <AnimatePresence mode="wait">
-          <div className="py-4">
-            {renderStep()}
-          </div>
-        </AnimatePresence>
-        <div className="flex justify-center space-x-4">
-          {currentStep < totalSteps - 1 && (
-            <Button variant="outline" onClick={handleSkip}>
-              Skip
+      <DialogContent className="flex p-0">
+        <div className="w-1/3 bg-gray-100 flex items-center justify-center p-4 rounded-l-lg">
+          <Image
+            src="/images/logo.jpeg"
+            alt="Seaful Logo"
+            width={150}
+            height={150}
+            objectFit="contain"
+          />
+        </div>
+        <div className="w-2/3 p-6 flex flex-col">
+          <DialogHeader>
+          </DialogHeader>
+          <AnimatePresence mode="wait">
+            <div className="py-4 flex-grow">
+              {renderStep()}
+            </div>
+          </AnimatePresence>
+          <div className="flex justify-center space-x-4 mt-auto">
+            {currentStep < totalSteps - 1 && (
+              <Button variant="outline" onClick={handleSkip}>
+                Skip
+              </Button>
+            )}
+            <Button onClick={handleNext}>
+              {currentStep === totalSteps - 1 ? "Finish" : "Next"}
             </Button>
-          )}
-          <Button onClick={handleNext}>
-            {currentStep === totalSteps - 1 ? "Finish" : "Next"}
-          </Button>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
