@@ -80,8 +80,8 @@ export function Sidebar({ className, currentView, onViewChange }: SidebarProps) 
       {/* Header */}
       <div className="flex h-16 items-center border-b px-6">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">S</span>
+          <div className="h-8 w-8 flex items-center justify-center">
+            <img src="/images/logo.jpeg" alt="Seaful.ai Logo" className="h-full w-full object-contain" />
           </div>
           <span className="font-semibold text-lg">Seaful.ai</span>
         </div>
