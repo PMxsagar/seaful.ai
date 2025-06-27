@@ -9,6 +9,7 @@ interface OnboardingContextType {
   completeOnboarding: () => void;
   nextStep: () => void;
   resetOnboarding: () => void;
+  skipOnboarding: () => void;
 }
 
 const OnboardingContext = createContext<OnboardingContextType | undefined>(
@@ -32,6 +33,11 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
     setCurrentStep(0);
   };
 
+  const skipOnboarding = () => {
+    setIsOnboardingComplete(true);
+    setCurrentStep(0); // Reset step for next time if they restart
+  };
+
   return (
     <OnboardingContext.Provider
       value={{
@@ -40,6 +46,7 @@ export function OnboardingProvider({ children }: { children: ReactNode }) {
         completeOnboarding,
         nextStep,
         resetOnboarding,
+        skipOnboarding,
       }}
     >
       {children}
