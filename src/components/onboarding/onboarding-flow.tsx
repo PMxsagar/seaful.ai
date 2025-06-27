@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 import { Card } from "../ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOnboarding } from "../../context/onboarding-context";
@@ -125,6 +125,11 @@ export function OnboardingFlow() {
         </div>
         <div className="w-2/3 p-8 flex flex-col justify-center">
           <DialogHeader>
+            <DialogTitle className="sr-only">
+              {currentStep === 0 && "Welcome to Seaful!"}
+              {currentStep >= 1 && currentStep <= features.length && features[currentStep - 1]?.title}
+              {currentStep === totalSteps - 1 && "You're All Set!"}
+            </DialogTitle>
           </DialogHeader>
           <AnimatePresence mode="wait">
             <div className="py-4">
@@ -138,7 +143,7 @@ export function OnboardingFlow() {
               </Button>
             )}
             <Button onClick={handleNext}>
-              {currentStep === totalSteps - 1 ? "Finish" : "Next"}
+              {currentStep === totalSteps - 1 ? "Let's Go!" : "Next"}
             </Button>
           </div>
         </div>
