@@ -72,21 +72,24 @@ export function OnboardingFlow() {
     } else if (currentStep >= 1 && currentStep <= features.length) {
       const feature = features[currentStep - 1];
       return (
-        <motion.div
-          key={currentStep}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <h2 className="text-2xl font-bold mb-4">Discover Our Features</h2>
-          <Card className="p-4 mx-auto max-w-sm">
-            <h3 className="font-semibold text-lg">{feature.title}</h3>
-            <p className="text-sm text-muted-foreground mt-2">{feature.description}</p>
-          </Card>
-        </motion.div>
+        <div className="text-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentStep}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="mx-auto max-w-sm"
+            >
+              <Card className="p-4">
+                <h3 className="font-semibold text-lg">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2">{feature.description}</p>
+              </Card>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       );
     } else if (currentStep === totalSteps - 1) {
       return (
@@ -113,8 +116,13 @@ export function OnboardingFlow() {
         <DialogHeader>
           <DialogTitle>Onboarding</DialogTitle>
         </DialogHeader>
+        {currentStep >= 1 && currentStep <= features.length && (
+          <h2 className="text-2xl font-bold mb-4 text-center">Discover Our Features</h2>
+        )}
         <AnimatePresence mode="wait">
-          <div className="py-4">{renderStep()}</div>
+          <div className="py-4">
+            {renderStep()}
+          </div>
         </AnimatePresence>
         <div className="flex justify-center space-x-4">
           {currentStep < totalSteps - 1 && (
